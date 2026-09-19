@@ -1,0 +1,191 @@
+/* ============================================
+   BASIC RESET & GLOBAL STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* CSS Box Model concept */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+/* ============================================
+   HEADER (Flexbox example)
+   ============================================ */
+header {
+    background-color: #1c3d5a;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   SEARCH FORM (Flexbox)
+   ============================================ */
+.search-form {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.search-form input,
+.search-form select,
+.search-form button {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-form button {
+    background-color: #1c3d5a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #14293d;
+}
+
+/* ============================================
+   ITEM GRID (CSS Grid example)
+   ============================================ */
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.item-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.item-card p {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.status {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.status-lost {
+    background-color: #c0392b;
+}
+
+.status-found {
+    background-color: #27ae60;
+}
+
+.view-btn,
+.back-btn {
+    display: inline-block;
+    margin-top: 0.75rem;
+    background-color: #1c3d5a;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.view-btn:hover,
+.back-btn:hover {
+    background-color: #14293d;
+}
+
+/* ============================================
+   DETAILS CARD
+   ============================================ */
+.details-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 600px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.details-card p {
+    margin-bottom: 0.6rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN (Media Queries)
+   ============================================ */
+
+/* Tablet screens */
+@media (max-width: 900px) {
+    .item-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+
+    .item-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+}
